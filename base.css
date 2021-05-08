@@ -1,0 +1,25 @@
+body {
+    font-family: Helvetica, Calibri, sans-serif;
+}
+#header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  font-size: 25px;
+}
+#nav-bar {
+  color: #A52A2A;
+  float: right;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: #A52A2A;
+  }
+}
