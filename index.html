@@ -18,29 +18,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="base.css">
 </head>
-    <nav id="navbar">
+<nav id="navbar">
 	<header>Python</header>
 	<a href="#introduction" class="nav-link">Introduction</a>
 	<a href="#strings" class="nav-link">Strings</a>
 	<a href="#numbers_operators" class="nav-link">Numbers and Operators</a>
 	<a href="#variables" class="nav-link">Variables</a>
 	<a href="#declaring_variables" class="nav-link">Declaring Variables</a>
-    <a href="#if_else" class="nav-link">If...else statement</a>
-    <a href="#functions" class="nav-link">Functions</a>
-    <a href="#classes_objects" class="nav-link">Classes and Objects</a>
-    <a href="#reference" class="nav-link">Reference</a>
+  <a href="#if_else" class="nav-link">If...else statement</a>
+  <a href="#functions" class="nav-link">Functions</a>
+  <a href="#classes_objects" class="nav-link">Classes and Objects</a>
+  <a href="#reference" class="nav-link">Reference</a>
 </nav>
 
 <main id="main-doc">
 	<section class="main-section" id="introduction">
 		<header>Introduction</header>
-    <p>Hello this is an introduction</p>
+    <p>Python is a programming language that can be easy to pick up whether you're a first time programmer or you're experienced with other languages.Python consistently ranks as one of the most popular programming languages.</p>
+    <p>Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
 	</section>
 	<section class="main-section" id="strings">
 		<header>Strings</header>
+    <p>A string is one of several data types that exist within the Python language. A data type, as the name implies, is a category that a particular type of data fits into, Every type of data you enter into a computer is segregated into one of these data types, whether they be numbers or letters, as is the case in this scenario. Giving data a type allows the computer to determine how to handle the data. For instance, if you want the program to show the mathematical equation 1+1 on a screen, you have to tell it that it is text. Otherwise, the program will interpret the data as a mathematical equation and evaluate it accordingly.</p>
+    <p>A string is a data type that consists of any character, be it a letter, number, symbol, or punctuation mark. Therefore, the following are all examples of strings:</p>
+      <code>
+      “Hello, how are you?”
+      “1 + 1”
+      “I ate 4 bananas”
+      “!@#$%^&*()”
+    </code>
+    <p>When you type a string into Python, you do so by preceding it with quotes.</p>
 	</section>
 	<section class="main-section" id="numbers_operators">
 		<header>Numbers and Operators</header>
+    <p>Python offers three different kinds of numbers with which you can work: integers, floating-point numbers (or floats), and imaginary numbers.</p>
+    <p>In the Python shell, you can enter different numbers and see what type tells you about how Python sees them:</p>
+    <code>
+      >>> type(1)
+      class ‘int’
+      >>> type(2000)
+      class ‘int’
+      >>> type(999999999999)
+      class ‘int’
+      >>> type(1.0)
+      class ‘float’
+       </code>
+    <p>Although in everyday life 1.0 is the same number as 1, Python will automatically perceive 1.0 as being a float; without the .0, the number 1 would be dealt with as the integer number one, which is a different kind of number.</p>
+    <p>In essence, the special distinction between a float and an integer is that a float has a component that is a fraction of 1. Numbers such as 1.01, 2.34, 0.02324 and any other number that contains a fractional component is treated as a floating-point number.</p>
+    <p>The last type of number that Python offers is oriented toward engineers and mathematicians. It’s the imaginary number. It’s defined as the square root of -1. Despite being named imaginary, it does have a lot of practical uses in modelling real-world engineering situations, as well as in other disciplines like physics and pure math. The imaginary number is built into Python so that it’s easily usable by user communities who frequently need to solve their problems with computers.</p>
+    <p>The imaginary number behaves very much like a float, except that it cannot be mixed with a float. When you see an imaginary number, it will have the letter j trailing it:</p>
+    <code>
+      >>> 12j
+      12j
+    </code>
+    <p>When you use the letter j next to a number and outside the context of a string (that is, not enclosed in quotes), Python knows that you’ve asked it to treat the number you’ve just entered as an imaginary number. When any letter appears outside of a string, it has to have a special meaning, such as this modifier, which specifies the type of number, or a named variable, or another special name. Otherwise, the appearance of a letter by itself will cause an error!</p>
+    <p>You can combine imaginary and nonimaginary numbers to create complex numbers:</p>
+    <code>
+      >>> 12j + 1
+(1+12j)
+>>> 12j + 1.01
+(1.01+12j)
+>>> type (12j _ 1)
+class ‘complex’
+  </code>
+    <p>You can enter basic arithmetic at the Python shell prompt and use it like a calculator. Like a calculator, Python will accept a set of operations, and when you press the Enter key, it will evaluate everything you’ve typed and give you your answer:</p>
+    <code>
+      >>> 5 + 300
+305
+6876
+>>> 40 – 20
+20
+>>> 4023 – 22.46
+4000.54
+>>>50 / 5
+10
+>>> 10 * 2
+20
+    </code>
 	</section>
 	<section class="main-section" id="variables">
 		<header>Variables</header>
@@ -52,6 +106,15 @@
 		<header>If...else statement</header>
   <section class="main-section" id="functions">
 		<header>Functions</header>
+    <p>A function in Python (and every other programming language) is a tool developers use to save time and make their programs more efficient. Instead of writing the same code over and over again, they store it in a function, and then call upon that function when they need it.</p>
+    <p>The print() function is used whenever you want to print text to the screen:</p>
+    <code>
+      >>> print (“Hello World!”)
+    </code>
+    <p>When you press Enter, you should see the following:</p>
+    <code>
+      Hello World!
+    </code>
   <section class="main-section" id="classes_objects">
 		<header>Classes and Objects</header>
   <section class="main-section" id="reference">
