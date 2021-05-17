@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
 body {
 	display: flex;
 	margin: 0px;
+  font-family: Cabin;
 }
 
-nav {
-	background-color: #eee;
+#navbar {
+  position: fixed;
+	background-color: #F0F8FF;
   border-right: 2px solid #777;
-	max-width: 250px;
+	max-width: 200px;
 	height: 100vh;
 }
 
+.nav-link {
+  
+}
 nav a {
 	border-top: 1px solid #777;
 	color: #000;
@@ -18,11 +25,17 @@ nav a {
 	text-decoration: none;
 }
 
-main {
-	 flex: 1;
+#main-doc {
+  flex: 1;
+  margin-left: 200px;
+  background-color: #FFEBCD;
 }
-#header {
-	font-size: 50px;
+
+.main-section {
+  
+}
+header {
+	font-size: 35px;
   font-weight: 500;
 	padding: 15px;
 }
@@ -30,3 +43,4 @@ main {
 . {
 	box-sizing: border-box;
 }
+
