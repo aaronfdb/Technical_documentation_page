@@ -22,12 +22,11 @@
 	<header>Python</header>
 	<a href="#introduction" class="nav-link">Introduction</a>
 	<a href="#strings" class="nav-link">Strings</a>
-	<a href="#numbers_operators" class="nav-link">Numbers and Operators</a>
+	<a href="#numbers_and_operators" class="nav-link">Numbers and Operators</a>
 	<a href="#variables" class="nav-link">Variables</a>
-	<a href="#declaring_variables" class="nav-link">Declaring Variables</a>
-  <a href="#if_else" class="nav-link">If...else statement</a>
+  <a href="#if...else_statement" class="nav-link">If...else statement</a>
   <a href="#functions" class="nav-link">Functions</a>
-  <a href="#classes_objects" class="nav-link">Classes and Objects</a>
+  <a href="#classes_and_objects" class="nav-link">Classes and Objects</a>
   <a href="#reference" class="nav-link">Reference</a>
 </nav>
 
@@ -49,7 +48,7 @@
     </ul>
     <p>When you type a string into Python, you do so by preceding it with quotes.</p>
 	</section>
-	<section class="main-section" id="numbers_operators">
+	<section class="main-section" id="numbers_and_operators">
 		<header>Numbers and Operators</header>
     <p>Python offers three different kinds of numbers with which you can work: integers, floating-point numbers (or floats), and imaginary numbers.</p>
     <p>In the Python shell, you can enter different numbers and see what type tells you about how Python sees them:</p>
@@ -98,15 +97,45 @@ class ‘complex’
 	</section>
 	<section class="main-section" id="variables">
 		<header>Variables</header>
-    <p>
+    <p>It’s difficult to always write strings and numbers explicitly throughout a program because it forces you to remember everything. The exacting memory that computers have enable them to remember far more details than people can, and taking advantage of that capability is a huge part of programming. However, to make using data more flexible and easy, you want to give the data names that can be used to refer to them.</p>
+    <p>These names are commonly called variables, which indicates that the data to which they refer can vary (it can be changed), while the name remains the same. The below are examples of variables:</p>
+    <ul>
+      <li>first_string = “This is a string”</li>
+      <li>second_string = “This is another string”</li>
+      <li>first_number = 4</li>
+      <li>second_number = 5</li>
+    </ul>
 	</section>
-	<section class="main-section" id="declaring_variables">
-		<header>Declaring Variables</header>
-    <p>
-	</section>
-  <section class="main-section" id="if_else">
+  <section class="main-section" id="if...else_statement">
 		<header>If...else statement</header>
-    <p>
+    <p>Python has a very simple way of letting you make decisions. The reserved word for decision making is if, and it is followed by a test for the truth of a condition, and the test is ended with a colon.  It can be used with anything that evaluates to True or False to say “if something is true, do what follows”.</p>
+    <code>
+    >>> if 1 > 2:
+    … 	print(“No it is not!”)
+    >>> if 2 > 1:
+    …	print(“Yes it is!”)
+    </code>
+    <p>You can create a chain of tests beginning with if … : using elif … :. elif … : enables a variety of conditions to be tested for but only if a prior condition wasn’t met. If you use a series of if … : statements they will all be executed. If you use an if … : followed by an elif … :, the elif … : will be evaluated only if the if … : results in a False value:</p>
+    <code>
+      >>> milk_price = 1.50
+      >>> if milk_price < 1.25:
+      …	print(“Buy two cartons of milk, they’re on sale”)
+      … elif milk_price < 2.00:
+    …	print(“Buy one carton of milk, prices are normal”)
+    … elif milk_price > 2.00:
+    …	print(“Go somewhere else! Milk costs too much here”)
+    </code>
+    <p>There is also a fall-through statement that you can insert to handle those cases where none of the prior tests resulted in a True value: the else: statement. If none of the if … : or elif … : statements have test conditions that evaluate to True, the else: clause is invoked:</p>
+    <code>
+      >>> OJ_price = 2.50
+      >>> if OJ_price < 1.25:
+      …	print(“Get one, I’m thirsty.”)
+      … elif OJ_price <=2.00:
+      …	print(“Ummm… sure, but I’ll drink it slowly.”)
+… else:
+…	print(“I don’t have enough money. Never mind.”)
+    </code>
+  </section>
   <section class="main-section" id="functions">
 		<header>Functions</header>
     <p>A function in Python (and every other programming language) is a tool developers use to save time and make their programs more efficient. Instead of writing the same code over and over again, they store it in a function, and then call upon that function when they need it.</p>
@@ -118,16 +147,26 @@ class ‘complex’
     <code>
       Hello World!
     </code>
-  <section class="main-section" id="classes_objects">
+  </section>
+  <section class="main-section" id="classes_and_objects">
 		<header>Classes and Objects</header>
-    <p>
+    <p>In Python, every piece of data you see or come into contact with is represented by an object. Each of these objects has three components: an identity, a type, and a value. The identity represents the location of the object being held in your memory (and therefore is unchangeable), while its type tells us what types of data and values it can have. The value, meanwhile, can be changed in an object, but only if it is set as a mutable type; if it is set as immutable, then it may not change.</p>
+    <code>
+      >>> omelet_type = “Cheese”:1 “Ham”:2
+    </code>
+    <p>After you have an object bound to a name, using that name provides you with access to all of the data and functions you’ve defined. When you are writing code for a class, you start by declaring that class. You do this with the class keyword.</p>
+    <p>The definition of a class is simple and mainly involves the use of the special word class along with a name.</p>
+    <code>
+      class Fridge
+      >>> f = Fridge ({“eggs”:6, “milk”:4, “cheese”:3})
+      >>> if f.has (“cheese”, 2):
+      …	print(“It’s time to make an omelet!”)
+    </code>
+  </section>
   <section class="main-section" id="reference">
 		<header>Reference</header>
     <p>Beginning Python by James Payne</p>
     <p>Wiley Publishing, Inc.</p>
-	</section>
-	</section>
-	</section>
 	</section>
 </main>
 <body>
