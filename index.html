@@ -53,13 +53,13 @@
     <p>Python offers three different kinds of numbers with which you can work: integers, floating-point numbers (or floats), and imaginary numbers.</p>
     <p>In the Python shell, you can enter different numbers and see what type tells you about how Python sees them:</p>
     <code>
-      >>> type(1)
-      class ‘int’
-      >>> type(2000)
-      class ‘int’
-      >>> type(999999999999)
-      class ‘int’
-      >>> type(1.0)
+      >>> type(1)<br>
+      class ‘int’<br>
+      >>> type(2000)<br>
+      class ‘int’<br>
+      >>> type(999999999999)<br>
+      class ‘int’<br>
+      >>> type(1.0)<br>
       class ‘float’
        </code>
     <p>Although in everyday life 1.0 is the same number as 1, Python will automatically perceive 1.0 as being a float; without the .0, the number 1 would be dealt with as the integer number one, which is a different kind of number.</p>
@@ -67,32 +67,32 @@
     <p>The last type of number that Python offers is oriented toward engineers and mathematicians. It’s the imaginary number. It’s defined as the square root of -1. Despite being named imaginary, it does have a lot of practical uses in modelling real-world engineering situations, as well as in other disciplines like physics and pure math. The imaginary number is built into Python so that it’s easily usable by user communities who frequently need to solve their problems with computers.</p>
     <p>The imaginary number behaves very much like a float, except that it cannot be mixed with a float. When you see an imaginary number, it will have the letter j trailing it:</p>
     <code>
-      >>> 12j
+      >>> 12j<br>
       12j
     </code>
     <p>When you use the letter j next to a number and outside the context of a string (that is, not enclosed in quotes), Python knows that you’ve asked it to treat the number you’ve just entered as an imaginary number. When any letter appears outside of a string, it has to have a special meaning, such as this modifier, which specifies the type of number, or a named variable, or another special name. Otherwise, the appearance of a letter by itself will cause an error!</p>
     <p>You can combine imaginary and nonimaginary numbers to create complex numbers:</p>
     <code>
-      >>> 12j + 1
-(1+12j)
->>> 12j + 1.01
-(1.01+12j)
->>> type (12j _ 1)
-class ‘complex’
-  </code>
+      >>> 12j + 1<br>
+      (1+12j)<br>
+      >>> 12j + 1.01<br>
+      (1.01+12j)<br>
+      >>> type (12j - 1)<br>
+      class ‘complex’<br>
+    </code>
     <p>You can enter basic arithmetic at the Python shell prompt and use it like a calculator. Like a calculator, Python will accept a set of operations, and when you press the Enter key, it will evaluate everything you’ve typed and give you your answer:</p>
     <code>
-      >>> 5 + 300
-305
-6876
->>> 40 – 20
-20
->>> 4023 – 22.46
-4000.54
->>>50 / 5
-10
->>> 10 * 2
-20
+      >>> 5 + 300<br>
+      305<br>
+      6876<br>
+      >>> 40 – 20<br>
+      20<br>
+      >>> 4023 – 22.46<br>
+      4000.54<br>
+      >>>50 / 5<br>
+      10<br>
+      >>> 10 * 2<br>
+      20
     </code>
 	</section>
 	<section class="main-section" id="variables">
@@ -110,30 +110,30 @@ class ‘complex’
 		<header>If...else statement</header>
     <p>Python has a very simple way of letting you make decisions. The reserved word for decision making is if, and it is followed by a test for the truth of a condition, and the test is ended with a colon.  It can be used with anything that evaluates to True or False to say “if something is true, do what follows”.</p>
     <code>
-    >>> if 1 > 2:
-    … 	print(“No it is not!”)
-    >>> if 2 > 1:
-    …	print(“Yes it is!”)
+    >>> if 1 > 2:<br>
+    print(“No it is not!”)<br>
+    >>> if 2 > 1:<br>
+    print(“Yes it is!”)
     </code>
     <p>You can create a chain of tests beginning with if … : using elif … :. elif … : enables a variety of conditions to be tested for but only if a prior condition wasn’t met. If you use a series of if … : statements they will all be executed. If you use an if … : followed by an elif … :, the elif … : will be evaluated only if the if … : results in a False value:</p>
     <code>
-      >>> milk_price = 1.50
-      >>> if milk_price < 1.25:
-      …	print(“Buy two cartons of milk, they’re on sale”)
-      … elif milk_price < 2.00:
-    …	print(“Buy one carton of milk, prices are normal”)
-    … elif milk_price > 2.00:
-    …	print(“Go somewhere else! Milk costs too much here”)
+      >>> milk_price = 1.50<br>
+      >>> if milk_price < 1.25<br>
+      print(“Buy two cartons of milk, they’re on sale”)<br>
+      elif milk_price < 2.00<br>
+      print(“Buy one carton of milk, prices are normal”)<br>
+      elif milk_price > 2.00<br>
+      print(“Go somewhere else! Milk costs too much here”)
     </code>
     <p>There is also a fall-through statement that you can insert to handle those cases where none of the prior tests resulted in a True value: the else: statement. If none of the if … : or elif … : statements have test conditions that evaluate to True, the else: clause is invoked:</p>
     <code>
-      >>> OJ_price = 2.50
-      >>> if OJ_price < 1.25:
-      …	print(“Get one, I’m thirsty.”)
-      … elif OJ_price <=2.00:
-      …	print(“Ummm… sure, but I’ll drink it slowly.”)
-… else:
-…	print(“I don’t have enough money. Never mind.”)
+      >>> OJ_price = 2.50<br>
+      >>> if OJ_price < 1.25<br>
+      print(“Get one, I’m thirsty.”)<br>
+      elif OJ_price <= 2.00<br>
+      print(“Ummm… sure, but I’ll drink it slowly.”)<br>
+      else<br>
+      print(“I don’t have enough money. Never mind.”)
     </code>
   </section>
   <section class="main-section" id="functions">
@@ -157,9 +157,9 @@ class ‘complex’
     <p>After you have an object bound to a name, using that name provides you with access to all of the data and functions you’ve defined. When you are writing code for a class, you start by declaring that class. You do this with the class keyword.</p>
     <p>The definition of a class is simple and mainly involves the use of the special word class along with a name.</p>
     <code>
-      class Fridge
-      >>> f = Fridge ({“eggs”:6, “milk”:4, “cheese”:3})
-      >>> if f.has (“cheese”, 2):
+      class Fridge<br>
+      >>> f = Fridge ({“eggs”:6, “milk”:4, “cheese”:3})<br>
+      >>> if f.has (“cheese”, 2):<br>
       …	print(“It’s time to make an omelet!”)
     </code>
   </section>
